@@ -1,7 +1,7 @@
 # AAMS — Autonomous Agent Manifest Specification
 ## Version 1.0 · local-first · 2026-02-18
 
-> **Repository:** https://github.com/aams-spec/aams  
+> **Repository:** https://github.com/DEVmatrose/AAMS  
 > **Status:** Draft  
 > **Maintainer:** open — contributions welcome  
 
@@ -492,7 +492,7 @@ Metadata for spec compliance and review scheduling.
 ```json
 "governance": {
   "spec_version": "1.0",
-  "spec_url": "https://github.com/aams-spec/aams",
+  "spec_url": "https://github.com/DEVmatrose/AAMS",
   "validated_with": "check-jsonschema",
   "last_reviewed": "2026-02-18",
   "review_interval_days": 90,
@@ -553,6 +553,7 @@ When an agent clones a repository and finds `AGENT.json`:
 | `secrets_policy`    | object  | ⬜        | Rules for handling credentials and secrets |
 | `ltm_triggers`      | array   | ⬜        | Rules for when long-term memory must be used |
 | `gitignore_patterns`| string[]| ⬜        | Patterns for .gitignore |
+| `diary_path`        | string  | ⬜        | Path to the Diary folder (Temporal Context Layer) — default: `./WORKING/DIARY` |
 
 #### `structure` — Folder Roles
 
@@ -565,6 +566,7 @@ When an agent clones a repository and finds `AGENT.json`:
 | `tools`             | `./WORKING/TOOLS`             | Project-specific helper scripts and tools |
 | `database`          | `./WORKING/DATABASE`          | Migrations, scripts, schema definitions |
 | `memory`            | `./WORKING/MEMORY`            | LTM index or vector store (e.g. ChromaDB) |
+| `diary`             | `./WORKING/DIARY`             | Temporal Context Layer — chronological decision and thought log |
 
 Additional roles can be freely defined (the schema allows arbitrary string keys).
 
@@ -841,6 +843,34 @@ Priorities: `mandatory` = MUST, `recommended` = SHOULD, `optional` = MAY.
 >
 > The specification intentionally leaves room for different technical implementations.
 
+#### `diary` — Temporal Context Layer
+
+The **Diary** is the mandatory fourth documentation layer. It captures the reasoning, strategic decisions, and reflections that fall between sessions — too informal for a Whitepaper, too narrativ for a Workpaper.
+
+**Four-layer model (all mandatory):**
+
+| Layer | Path | Temporal scope | Character |
+|-------|------|----------------|-----------|
+| **Whitepaper** | `WORKING/WHITEPAPER/` | Long-term | Normative / structural |
+| **Workpaper** | `WORKING/WORKPAPER/` | Session-scoped | Operational / iterative |
+| **Diary** | `WORKING/DIARY/` | Chronological | Narrative / reflective |
+| **Memory (LTM)** | `WORKING/MEMORY/` | Cross-session | Queryable / indexed |
+
+**Three rules — no more:**
+1. Maximum 10 lines per entry
+2. Only decisions, blockers, insights
+3. No perfectionism — the obligation is to *presence*, not *perfection*
+
+**File structure:** Monthly files — `WORKING/DIARY/YYYY-MM.md`. Bootstrap creates the `WORKING/DIARY/` folder. The first file is created lazily on the first entry (never a blank placeholder).
+
+**LTM integration:** Diary entries are ingested into ChromaDB at session end (they are high-density signal: short, contextual, time-stamped).
+
+**Who writes:** Humans write strategic reflections. Agents write rationale entries when making architecture decisions.
+
+**`diary_path`** in `workspace.structure` specifies the diary folder. Default: `./WORKING/DIARY`.
+
+---
+
 #### Section Interplay
 
 ```
@@ -851,6 +881,7 @@ workspace.workpaper_rules   → Agent knows HOW workpapers are written
 workspace.code_hygiene      → Agent knows HOW to work cleanly
 workspace.secrets_policy    → Agent knows WHAT must never be written
 workspace.ltm_triggers      → Agent knows WHEN to use LTM
+workspace.structure.diary   → WHERE the Diary lives (Temporal Context Layer)
 memory.long_term.path       → WHERE the LTM resides (derived from workspace.structure.memory)
 session.workpaper_path      → WHERE workpapers reside (derived from workspace.structure.workpapers)
 ```
@@ -1086,7 +1117,7 @@ AAMS is an open standard. We invite you to:
 - Contribute validator tools
 - Submit your own implementations as references
 
-→ **https://github.com/aams-spec/aams**
+→ **https://github.com/DEVmatrose/AAMS**
 
 ---
 

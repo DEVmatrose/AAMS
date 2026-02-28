@@ -35,8 +35,8 @@
 ## Status
 
 - **Initialisiert:** 2026-02-22
-- **Letzter Ingest:** 2026-02-26 (Signal-Redesign vollständig: README/AGENTS/READ-AGENT/HTML-Meta)
-- **Einträge gesamt:** 58
+- **Letzter Ingest:** 2026-02-28 (Repo-Issue-Review: 5 Issues geschlossen, Diary Layer implementiert)
+- **Einträge gesamt:** 67
 
 ---
 
@@ -102,6 +102,15 @@
 | 056 | 2026-02-26 | README | `README.md` | Neuer Abschnitt "What AAMS Can and Cannot Do": ehrliche Darstellung autonome Agenten (works) vs. Chat-Agenten (user prompt nötig). 3-Zeilen-Tabelle (Autonomous / Chat+Context / Pure Chat). Offenes Problem benannt. Aktuelle Arbeitsrichtungen dokumentiert (system-prompt-injection, bootstrap-prompt-library, on_entry-Signal). Bridge: prompts/bootstrap.md. |
 | 057 | 2026-02-26 | SIGNAL | `docs/index.html` | AI-Agent-Block im HTML `<head>`: imperative HTML-Kommentare (gleiche Sprache wie README/AGENTS.md) + 4 strukturierte `<meta>`-Tags mit `aams-`-Namespace: `aams-agent-contract` (Raw-URL .agent.json), `aams-entry-point` (READ-AGENT.md), `aams-action` (execute on_first_entry), `aams-spec` (AAMS/1.0). Namespace bewusst gewählt: zukünftige Crawler/Runtimes können `aams-`-Tags als Erkennungsmuster nutzen. |
 | 058 | 2026-02-26 | SESSION | `WORKING/WORKPAPER/2026-02-26-entry-point-klarheit.md` | Session-Dokumentation vervollständigt. Running Log + File Protocol aktualisiert (README Ehrlichkeits-Sektion + HTML-Meta-Tags). LTM-Ingest abgeschlossen. |
+| 059 | 2026-02-28 | FIX | `SPEC.md` | 3× stale URL `aams-spec/aams` → `DEVmatrose/AAMS` korrigiert (L4, L495, L1089). |
+| 060 | 2026-02-28 | SESSION | `WORKING/WORKPAPER/closed/2026-02-23-fix-ltm-python-interpreter.md` | WP 2026-02-23 geschlossen. Fix (LTM Commands Block in READ-AGENT.md) war bereits implementiert — WP nur nicht archiviert. Status → CLOSED, nach closed/ verschoben. |
+| 061 | 2026-02-28 | FEATURE | `SPEC.md` | Diary Layer (Temporal Context Layer) implementiert. Neuer `#### diary` Abschnitt im workspace-Bereich: Vier-Schichten-Modell (Whitepaper/Workpaper/Diary/Memory), drei Regeln, monatliche Dateien, lazy creation, LTM-Integration, Section Interplay aktualisiert. `diary_path` in Base Fields und Folder Roles Tables ergänzt. |
+| 062 | 2026-02-28 | FEATURE | `AGENT.json` | `workspace.structure.diary: "./WORKING/DIARY"` hinzugefügt. Vier-Schichten-Modell im Manifest verankert. |
+| 063 | 2026-02-28 | FEATURE | `AGENT_SCHEMA.json` | `diary` in `workspace.structure.properties` ergänzt mit Description (Temporal Context Layer). |
+| 064 | 2026-02-28 | DIARY | `WORKING/DIARY/2026-02.md` | Erstes Diary-File angelegt. Zwei Einträge: (1) Repo-Review-Erkenntnisse + Lehre über "Entschieden aber nicht umgesetzt". (2) Sicherheitsvorfall Access-Token im Chat. |
+| 065 | 2026-02-28 | SESSION | `WORKING/WORKPAPER/closed/2026-02-24-diary-layer-konzept.md` | WP 2026-02-24 CLOSED. Alle 5 Next Steps implementiert. Vier-Schichten-Modell vollständig. Nach closed/ verschoben. |
+| 066 | 2026-02-28 | FIX | `READ-AGENT.md` | Current Status Sektion aktualisiert: LTM 28→58 Einträge, Whitepapers 1→2, offene WPs korrigiert, Diary Layer ergänzt, Issues #1-6 Status. |
+| 067 | 2026-02-28 | SESSION | `WORKING/WORKPAPER/closed/2026-02-28-repo-issue-review.md` | Repo-Issue-Review Session abgeschlossen. 5 Issues identified, 4 vollständig gelöst, 1 suspended (Feldtest). Diary Layer implementiert. LTM-Ingest abgeschlossen. |
 
 ---
 

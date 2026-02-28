@@ -138,11 +138,12 @@ Core idea:
 
 - Bootstrap: **complete** (2026-02-22)
 - Spec version: AAMS/1.0
-- Workspace: initialized, all folders present
-- LTM: 28 entries → `WORKING/MEMORY/ltm-index.md` (Audit-Log) + `WORKING/AGENT-MEMORY/` (ChromaDB ✅ aktiv, 114 Chunks)
-- Whitepapers: 1 → `WORKING/WHITEPAPER/INDEX.md`
-- Open workpapers: 1 → `2026-02-22-feldtest-independentes-repo.md` (pending: external repo test)
+- Workspace: initialized, all folders present (incl. `WORKING/DIARY/` — Temporal Context Layer)
+- LTM: 58 entries → `WORKING/MEMORY/ltm-index.md` (Audit-Log) + `WORKING/AGENT-MEMORY/` (ChromaDB ✅ aktiv, 114 Chunks)
+- Whitepapers: 2 → `WORKING/WHITEPAPER/INDEX.md` (WP-001 AAMS Overview, WP-002 Related Work)
+- Open workpapers: 1 → `2026-02-22-feldtest-independentes-repo.md` (SUSPENDED: pending external repo test)
 - READMEs: DE ✅ · EN ✅ (CH archived) — review fixes applied ✅
 - LTM architecture: dual-layer (audit-log + vector store) ✅
 - SPEC path bugs: fixed ✅ · Skills: `bootstrap_workspace` ✅
-- GitHub Issues #1–3: addressed, ready to close on GitHub
+- GitHub Issues #1–6: addressed and closed
+- Diary Layer: **active** — `WORKING/DIARY/2026-02.md` (four-layer documentation model)

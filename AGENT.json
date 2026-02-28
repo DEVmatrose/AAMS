@@ -175,7 +175,8 @@
       "guidelines": "./WORKING/GUIDELINES",
       "tools": "./WORKING/TOOLS",
       "database": "./WORKING/DATABASE",
-      "memory": "./WORKING/AGENT-MEMORY"
+      "memory": "./WORKING/AGENT-MEMORY",
+      "diary": "./WORKING/DIARY"
     },
 
     "onboarding": {

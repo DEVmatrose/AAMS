@@ -346,7 +346,8 @@
             "guidelines":        { "type": "string", "description": "Coding standards, architecture rules, conventions." },
             "tools":             { "type": "string", "description": "Project-specific helper scripts and tools." },
             "database":          { "type": "string", "description": "Migrations, scripts, schema definitions." },
-            "memory":            { "type": "string", "description": "LTM vector store (e.g. ChromaDB)." }
+            "memory":            { "type": "string", "description": "LTM vector store (e.g. ChromaDB)." },
+            "diary":             { "type": "string", "description": "Temporal Context Layer — mandatory 4th documentation layer. Chronological decision and thought log. Monthly files." }
           },
           "patternProperties": { "^_": true },
           "additionalProperties": { "type": "string" }

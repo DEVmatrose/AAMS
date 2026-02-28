@@ -3,7 +3,7 @@
 - **Date:** 2026-02-22
 - **Agent:** GitHub Copilot / Claude Sonnet 4.6
 - **Topic:** Live-Test von AAMS/1.0 in einem bestehenden, unabhängigen Repository
-- **Status:** 🚧 IN PROGRESS
+- **Status:** ⏸ SUSPENDED — Kein externes Repo verfügbar. Bleibt offen bis User ein externes Test-Repo bereitstellt.
 
 ---
 

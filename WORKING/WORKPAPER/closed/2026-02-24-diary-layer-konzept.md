@@ -1,7 +1,7 @@
 # WORKPAPER — Diary Layer: Temporal Context in AAMS
 
-**Session:** 2026-02-24 (Review: 2026-02-26)
-**Status:** OPEN — Diary ist **mandatory**. Implementierung ausstehend.
+**Session:** 2026-02-24 (Review: 2026-02-26, Closed: 2026-02-28)
+**Status:** CLOSED — Alle Next Steps implementiert.
 **Typ:** Architektur-Entscheidung / Feature-Spezifikation
 
 ---
@@ -182,11 +182,17 @@ Ein Regelwerk tötet es.
 
 ## Next Steps
 
-- [ ] SPEC.md: Neuen **mandatory** Abschnitt "Diary Layer (Temporal Context)" — max. 1 Seite, drei Regeln, gleicher Rang wie Workpaper/Whitepaper
-- [ ] AGENT.json: `workspace.diary_path` als **required** Feld
-- [ ] AGENT_SCHEMA.json: `diary_path` als required ergänzen
-- [ ] Bootstrap: Schritt `create_diary_folder` (Ordner anlegen, keine Datei)
-- [ ] Erstes Diary-File anlegen: `WORKING/DIARY/2026-02.md`
+- [x] SPEC.md: Neuer **mandatory** Abschnitt "Diary Layer (Temporal Context)" — implementiert 2026-02-28
+- [x] AGENT.json: `workspace.structure.diary` Feld ergänzt — implementiert 2026-02-28
+- [x] AGENT_SCHEMA.json: `diary` in structure properties ergänzt — implementiert 2026-02-28
+- [x] Bootstrap: Ordner `WORKING/DIARY/` wird über `workspace.structure` + `create_structure` abgedeckt — kein separater Schritt nötig
+- [x] Erstes Diary-File angelegt: `WORKING/DIARY/2026-02.md` — implementiert 2026-02-28
+
+---
+
+## Closing Note (2026-02-28)
+
+Alle Next Steps umgesetzt in Session `2026-02-28-repo-issue-review`. Vier-Schichten-Modell nun vollständig implementiert in SPEC.md, AGENT.json, AGENT_SCHEMA.json. Diary aktiv.
 
 ---
 

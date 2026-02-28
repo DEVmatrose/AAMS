@@ -1,7 +1,8 @@
 # WORKPAPER — Fix: LTM Python-Interpreter-Ambiguität
 
 **Session:** 2026-02-23
-**Status:** OPEN
+**Closed:** 2026-02-28
+**Status:** CLOSED
 **Typ:** Bugfix / Live-Process-Issue
 
 ---
@@ -63,6 +64,12 @@ READ-AGENT.md hatte bisher keinen separaten Quick-Start-Block mit python-Befehle
 
 ## Next Steps
 
-- [ ] Commit + Push dieser Änderung
-- [ ] Prüfen: Gibt es andere Stellen in READ-AGENT.md oder SPEC.md wo Python-Befehle ohne `.venv`-Pfad stehen?
-- [ ] Workpaper schließen + LTM ingesten
+- [x] Fix implementiert in `READ-AGENT.md` (LTM Commands Block)
+- [x] Prüfung SPEC.md Python-Befehle — keine expliziten venv-Befehle in SPEC.md (SPEC beschreibt Standard, nicht Befehle)
+- [x] Workpaper geschlossen 2026-02-28 (Session: repo-issue-review)
+
+---
+
+## Closing Note (2026-02-28)
+
+Fix war bereits implementiert (LTM Commands Block in READ-AGENT.md vorhanden, verifiziert). Workpaper war nur nicht geschlossen worden. Abgeschlossen im Zuge der Repo-Issue-Review-Session.

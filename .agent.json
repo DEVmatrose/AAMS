@@ -66,12 +66,15 @@
 
     "gitignore_patterns": {
       "_note": "WORKING/MEMORY/ is intentionally NOT ignored — ltm-index.md is the shared collaboration artifact. Only binary/runtime artifacts are excluded.",
+      "_gitkeep_note": "Use glob+negation patterns (WORKING/LOGS/*) instead of folder patterns (WORKING/LOGS/) to keep .gitkeep files trackable. See issue #10.",
       "always": [
-        "WORKING/LOGS/",
+        "WORKING/LOGS/*",
+        "!WORKING/LOGS/.gitkeep",
         "WORKING/WORKPAPER/*.tmp"
       ],
       "when_using_vector_store": [
-        "WORKING/AGENT-MEMORY/",
+        "WORKING/AGENT-MEMORY/*",
+        "!WORKING/AGENT-MEMORY/.gitkeep",
         "WORKING/MEMORY/*.db",
         "WORKING/MEMORY/chroma/"
       ]
@@ -83,9 +86,17 @@
     "on_first_entry": [
       "1. Read READ-AGENT.md (if exists)",
       "2. Create all workspace.structure folders if missing",
-      "3. Scan repository and write results to first workpaper",
+      "3. Scan repository → write first workpaper with sections: session_goal, repository_inventory (file tree + status), key_findings (from README + docs), open_questions, file_protocol, next_steps",
       "4. Create READ-AGENT.md if missing",
       "5. Index existing documentation into memory"
+    ],
+    "first_workpaper_sections": [
+      "session_goal",
+      "repository_inventory",
+      "key_findings",
+      "open_questions",
+      "file_protocol",
+      "next_steps"
     ],
     "on_session_start": [
       "1. Read READ-AGENT.md",

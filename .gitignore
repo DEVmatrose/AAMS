@@ -10,13 +10,17 @@
 # they are the session and architecture history of the project.
 
 # Logs: machine-generated runtime output, no collaboration value
-WORKING/LOGS/
+# Using WORKING/LOGS/* + negation so .gitkeep stays trackable (fix: issue #10)
+WORKING/LOGS/*
+!WORKING/LOGS/.gitkeep
 
 # Temporary workpaper drafts
 WORKING/WORKPAPER/*.tmp
 
 # Vector store (binary data, not diffable — rebuilt from ltm-index.md on first ingest)
-WORKING/AGENT-MEMORY/
+# Using WORKING/AGENT-MEMORY/* + negation so .gitkeep stays trackable (fix: issue #10)
+WORKING/AGENT-MEMORY/*
+!WORKING/AGENT-MEMORY/.gitkeep
 WORKING/MEMORY/*.db
 
 # Secret Exclusion Policy — these files must never be versioned

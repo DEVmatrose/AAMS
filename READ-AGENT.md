@@ -66,7 +66,8 @@ Core idea:
 ### On first entry (Onboarding)
 1. Read this file fully
 2. Check: does `WORKING/` structure exist? → if not: create all folders
-3. Scan entire repository → write inventory + analysis to first workpaper
+3. Scan entire repository → write first workpaper  
+   Minimum sections: **session goal · repository inventory** (file tree + status) **· key findings** (from README/docs) **· open questions · file protocol · next steps**
 4. Create `READ-AGENT.md` if missing
 5. Index existing documentation into `WORKING/MEMORY/`
 
@@ -77,6 +78,13 @@ Core idea:
 2. Check last workpaper in `WORKING/WORKPAPER/` — what was the last state?
 3. Query `WORKING/MEMORY/` for the session topic
 4. Open or create workpaper for this session
+
+---
+
+### State Recovery (when agent state is uncertain)
+
+> **File system and git log are ground truth — never rely solely on in-memory task tracking.**  
+> If task state is unclear: re-read the current workpaper’s **File Protocol** section. What exists on disk and in `git log` is what was actually done. Treat in-memory todo state as advisory only.
 
 ---
 

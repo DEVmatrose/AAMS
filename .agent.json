@@ -14,13 +14,14 @@
       "workpapers_closed": "./WORKING/WORKPAPER/closed",
       "memory":      "./WORKING/MEMORY",
       "ltm_store":   "./WORKING/AGENT-MEMORY",
+      "diary":       "./WORKING/DIARY",
       "logs":        "./WORKING/LOGS",
       "guidelines":  "./WORKING/GUIDELINES",
       "tools":       "./WORKING/TOOLS"
     },
 
     "documentation_model": {
-      "_doc": "Three-layer documentation model. Every agent working in this repo MUST follow this.",
+      "_doc": "Four-layer documentation model. Every agent working in this repo MUST follow this.",
       "workpaper": {
         "purpose": "Session- and task-scoped working documents. Created at session start, closed at session end.",
         "naming": "{date}-{agent}-{topic}.md",
@@ -30,6 +31,12 @@
       "whitepaper": {
         "purpose": "Stable architecture and system truth. Written once, updated on structural decisions only.",
         "location": "./WORKING/WHITEPAPER/",
+        "on_close": "stays — never moved"
+      },
+      "diary": {
+        "purpose": "Temporal context layer. Chronological decision log — why we decided what. Monthly files, max 10 lines per entry.",
+        "naming": "{YYYY}-{MM}.md",
+        "location": "./WORKING/DIARY/",
         "on_close": "stays — never moved"
       },
       "memory": {

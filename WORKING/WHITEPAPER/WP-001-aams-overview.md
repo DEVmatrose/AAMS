@@ -3,7 +3,7 @@
 
 - **ID:** WP-001
 - **Erstellt:** 2026-02-22
-- **Letztes Update:** 2026-03-03
+- **Letztes Update:** 2026-03-26
 - **Status:** Aktiv
 - **Typ:** Architektur / Projektverständnis
 
@@ -148,22 +148,23 @@ Langfristiges Ziel: AAMS wird zu einem **de-facto Standard** den jedes Agenten-F
 
 ---
 
-## 8. Aktueller Stand (2026-03-03)
+## 8. Aktueller Stand (2026-03-26)
 
 | Bereich | Status |
 |---|---|
 | Spezifikation (SPEC.md / SPEC-DE.md) | Vollständig, AAMS/1.0 |
-| Referenz-Manifest (AGENT.json) | Vollständig, annotiert |
-| JSON Schema (AGENT_SCHEMA.json) | Vollständig |
-| Minimal-Bootstrap (.agent.json) | Aktiv, AAMS-MINI/1.0 |
-| READ-AGENT.md | Aktiv — dual-track LTM, Diary Layer, AAMS-MINI vs. full |
+| Referenz-Manifest (AGENT.json) | Vollständig, annotiert — inkl. `_deviations` |
+| JSON Schema (AGENT_SCHEMA.json) | Vollständig — inkl. `_deviations` |
+| Minimal-Bootstrap (.agent.json) | Aktiv, AAMS-MINI/1.0 — Vier-Schichten-Modell (inkl. Diary) |
+| READ-AGENT.md | Aktiv — dual-track LTM, Diary Layer, §4 Blueprint.md Workflow |
 | AGENTS.md | Aktiv — auto-read bridge für alle major Agent-Tools |
-| WORKING/-Struktur | Vollständig aktiv inkl. DIARY/ |
-| Workpapers (archived) | 14+ in WORKPAPER/closed/ |
+| WORKING/-Struktur | Vollständig aktiv inkl. DIARY/ und DATABASE/ |
+| Workpapers (archived) | 20+ in WORKPAPER/closed/ |
 | Whitepapers | 2 (WP-001, WP-002) |
-| LTM | 58 Einträge ltm-index.md + 114 Chunks ChromaDB |
-| GitHub Issues #1-#13 | Geschlossen |
-| GitHub Issues #14-#18 | Offen — aktuell in Bearbeitung |
+| LTM | 67+ Einträge ltm-index.md + ChromaDB |
+| GitHub Issues #1-#20 | Geschlossen |
+| GitHub Issues #21-#26 | Offen — neue Aufgaben aus Session 2026-03-26 |
 | GitHub Pages | Live — devmatrose.github.io/AAMS |
 | Field Report | Luna-1 (#17): 4 Monate Produktionseinsatz bestätigt |
 | AAMS-MINI | Eingeführt: ltm_mode markdown (Track A) + vector (Track B) |
+| Neue Features (2026-03-26) | `_deviations` Schema-Feld, LTM Setup Order in README, CLAUDE.md/GEMINI.md Positioning, §4 Blueprint.md Workflow |

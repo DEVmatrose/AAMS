@@ -71,6 +71,30 @@ The solution is not a new AI. The solution is **discipline in the repo**.
 
 ---
 
+## "I Don't Need This. I Manage Context Myself."
+
+You might. For now. Here's what changes — and these are provable, not opinions:
+
+**It's not about you losing context. It's about your agent losing it.** You remember what you decided last week. Your agent doesn't. Every session, it starts from zero. You compensate with your own memory — and you don't notice the cost because it feels like "just prompting."
+
+**Provability.** Every decision, every file change, every architectural choice is documented with a timestamp in a workpaper. `git log` proves what happened. `ltm-index.md` proves what the agent knew when it decided. No more "who changed this and why?" — you `grep` the workpaper archive. That's not overhead. That's an audit trail you'd want in any production codebase.
+
+**History.** Session 1 through session 100 — every one is a markdown file in `WORKING/WORKPAPER/closed/`. A new developer, a new agent, or you after a 3-month break can read the entire project history in chronological order. No tribal knowledge. No "ask Stefan, he knows." The repo speaks for itself.
+
+**Economics.** How much time do you spend re-explaining context to your agent? Repeating architecture decisions? Fixing things the agent broke because it didn't know about a constraint from two weeks ago? That's invisible cost. AAMS makes the agent self-serving: it queries memory before it acts, it documents what it does, and the next session inherits everything. The ROI is not "more features" — it's fewer wasted tokens, fewer reverted commits, fewer repeated decisions.
+
+**Tool lock-in is invisible.** Today it's Cursor. Tomorrow Copilot Agent Mode ships something better. Next month Claude Code gets a feature you need. Every tool has its own conventions (`.cursorrules`, `CLAUDE.md`, `.windsurfrules`). Without a standard, your context lives in your head — not in the repo. Switch tools, and the new one starts blind. With AAMS: switch tools, context stays. That's a measurable migration cost of zero.
+
+**Scale breaks manual tracking.** At 5 sessions, you remember everything. At 50, you start re-deciding things you decided two months ago. At 100, your agent hallucinates solutions to problems that were already solved — because nobody told it.
+
+**The second person changes everything.** The moment a colleague, a freelancer, or a second agent touches your repo, your head-context is worthless to them. The repo must speak for itself.
+
+**The cost of adopting AAMS is one `curl` command.** Zero dependencies. No install. No framework. No lock-in. The effort to adopt it is mass-zero. The effort to *not* adopt it is the silent accumulation of repeated decisions, orphaned files, and context you reconstruct from memory instead of reading it from disk.
+
+> You're not adding overhead. You're removing the overhead you didn't know you had.
+
+---
+
 ## AAMS Is Not a Framework
 
 This is the most important clarification.

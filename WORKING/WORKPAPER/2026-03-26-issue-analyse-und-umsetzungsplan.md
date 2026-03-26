@@ -307,8 +307,13 @@ die nächsten Implementierungen.
 | MOVED | `WORKING/WORKPAPER/2026-02-24-diary-layer-konzept.md` → `closed/` | T7: Workpaper-Hygiene |
 | MOVED | `WORKING/WORKPAPER/2026-03-03-session-check-issues-review.md` → `closed/` | T7: Workpaper-Hygiene |
 | GITHUB | Issues #21–#26 | Neue Issues: T1 (_deviations), T2 (ltm hero), T3 (CLAUDE.md/GEMINI.md pos.), T4 (blueprint), T5 (bootstrap prompts), T6 (security signals) |
-| GITHUB | Issue #7 closed | Duplikat von #8, superseded by #26 |
-| GITHUB | Issue #15 closed | Superseded by T4-Issue #24 |
+| GITHUB | Issue #8 closed | Superseded by #26 (Security Signals) — Tracking in #26 |
+| GITHUB | Issue #14 closed | T3 implementiert (README.md CLAUDE.md/GEMINI.md Positionierung) |
+| GITHUB | Issue #16 closed | T4 implementiert (§4 Blueprint.md in READ-AGENT.md) |
+| GITHUB | Issue #17 closed | Alle 5 Empfehlungen umgesetzt (T1–T4 + #25 offen) |
+| GITHUB | Issue #18 closed | T3 implementiert (GEMINI.md/airules.md Mapping in README.md) |
+| GITHUB | Issue #19 closed | Field Report anerkannt, §4 READ-AGENT.md adressiert Use Case |
+| GITHUB | Issue #20 closed | Field Report anerkannt, Bootstrap-Gap → #25 |
 
 ---
 

@@ -31,6 +31,7 @@ Core idea:
 | `WORKING/WHITEPAPER/` | Stable architecture and system truth. Not for daily work. See [INDEX.md](WORKING/WHITEPAPER/INDEX.md). |
 | `WORKING/WORKPAPER/` | Session- and task-scoped working documents. One per session. |
 | `WORKING/WORKPAPER/closed/` | Finished workpapers after session close. |
+| `WORKING/DIARY/` | Temporal context layer. Chronological decision log — why we decided what. Monthly files. |
 | `WORKING/MEMORY/` | Long-term context store. Cross-session knowledge. |
 | `WORKING/LOGS/` | Agent action logs and audit trail. |
 | `WORKING/GUIDELINES/` | Coding standards and architecture rules derived from this project. |
@@ -40,7 +41,7 @@ Core idea:
 
 ## Documentation Model
 
-**Three layers — mandatory:**
+**Four layers — mandatory:**
 
 1. **Workpaper** — What am I doing right now in this session?
    - Created at session start, closed at session end.
@@ -51,7 +52,12 @@ Core idea:
    - Stable. Written once. Updated only on architecture decisions.
    - Never moved, never deleted.
 
-3. **Memory** — What did we learn across sessions?
+3. **Diary** — Why did we decide this?
+   - Chronological decision log. Monthly files (`YYYY-MM.md`).
+   - Max 10 lines per entry. Captures strategic motives, blockers, reflections.
+   - Fills the gap between workpaper (operational) and whitepaper (structural).
+
+4. **Memory** — What did we learn across sessions?
    - Ingest every closed workpaper.
    - Query at every session start.
 

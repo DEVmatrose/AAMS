@@ -58,6 +58,7 @@ project-root/
 │   ├── WHITEPAPER/       ← stable architecture docs
 │   ├── WORKPAPER/        ← active sessions
 │   │   └── closed/       ← archived sessions
+│   ├── DIARY/            ← chronological decision log (monthly)
 │   ├── MEMORY/           ← LTM context store
 │   ├── GUIDELINES/       ← coding standards
 │   ├── LOGS/             ← agent audit trail

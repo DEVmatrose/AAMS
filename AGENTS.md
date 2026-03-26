@@ -39,6 +39,7 @@ WORKING/
 ├── WHITEPAPER/     ← stable architecture truth
 ├── WORKPAPER/      ← active session (one file per session)
 │   └── closed/     ← archived sessions
+├── DIARY/          ← chronological decision log (monthly)
 ├── MEMORY/         ← long-term context index
 ├── GUIDELINES/     ← coding standards
 ├── LOGS/           ← audit trail

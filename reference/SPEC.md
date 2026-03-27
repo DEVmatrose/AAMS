@@ -47,6 +47,10 @@ This separates AAMS from agent memory frameworks (MemGPT, LangChain Memory) that
 
 > **For framework designers:** `memory.long_term.backend` is the extension point. AAMS specifies the contract (when to query, when to ingest, where the store lives); your framework implements the mechanism.
 
+**Long-Horizon-Reasoning (LHR) positioning:**
+
+AAMS is the lowest solvable layer in the LHR stack. Without scaffolding, memory has no structure; without structure, orchestration has no context; without context, reasoning loops. AAMS declares *where* context lives, *when* it is loaded, and *how* sessions are documented — the reasoning itself is the model's responsibility. For the full analysis, see `WORKING/WHITEPAPER/WP-004-long-horizon-reasoning.md`.
+
 ---
 
 ## Compliance and Enforcement

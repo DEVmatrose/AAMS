@@ -12,6 +12,7 @@
 | WP-001 | [WP-001-aams-overview.md](./WP-001-aams-overview.md) | AAMS Projektübersicht — Vier-Schichten-Modell, AAMS-MINI vs. full, LTM dual-track, _deviations, Blueprint.md | 2026-03-26 | Aktiv |
 | WP-002 | [WP-002-related-work.md](./WP-002-related-work.md) | Related Work — AAMS vs. MemGPT, LangChain Memory, DVC, FIPA, per-tool conventions | 2026-02-22 | Aktiv |
 | WP-003 | [WP-003-field-discourse.md](./WP-003-field-discourse.md) | Field Discourse — Kritische Bewertungen, Gegenargumente, Feldanalysen, CodeRabbit-Discovery, Wissensmanagement-Kontakt | 2026-03-27 | Aktiv |
+| WP-004 | [WP-004-long-horizon-reasoning.md](./WP-004-long-horizon-reasoning.md) | Long-Horizon-Reasoning — LHR-Diagnose, AAMS als Scaffolding-Layer, Cross-Model-Validierung, Wirtschaft, v1.1-Gaps | 2026-03-27 | Aktiv |
 
 ---
 

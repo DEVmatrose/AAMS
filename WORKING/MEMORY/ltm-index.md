@@ -35,8 +35,8 @@
 ## Status
 
 - **Initialisiert:** 2026-02-22
-- **Letzter Ingest:** 2026-02-28 (Repo-Issue-Review: 5 Issues geschlossen, Diary Layer implementiert)
-- **Einträge gesamt:** 67
+- **Letzter Ingest:** 2026-03-27 (G1-G4 Issue-Bodies vorbereitet für v1.1-Roadmap)
+- **Einträge gesamt:** 87
 
 ---
 
@@ -125,6 +125,12 @@
 | 079 | 2026-03-26 | FIX | `docs/index.html` | LTM-Zahlen aktualisiert (46→67+), `prompts/bootstrap.md` → `reference/prompts/bootstrap.md`, Footer SPEC-Link → `reference/SPEC.md`. |
 | 080 | 2026-03-26 | UPDATE | `WORKING/WHITEPAPER/WP-001-aams-overview.md` | Stand 2026-03-26: T1-T4 Features dokumentiert, Issue-Status, LTM-Zahlen, neue Features-Zeile. |
 | 081 | 2026-03-26 | CLEANUP | `WORKING/DATABASE/` | Geistordner entfernt — Artefakt aus Selfcheck-Commit 8259553, nie in `.agent.json` deklariert. |
+| 082 | 2026-03-27 | ANALYSE | `WORKING/WORKPAPER/2026-03-27-long-horizon-reasoning-analyse.md` | Long-Horizon-Reasoning (LHR) Analyse für reale Codebases. Kernthese: AAMS löst LHR nicht, sondern liefert das Scaffolding (unterste lösbare Schicht im LHR-Stack). Geschichte CoT→MemGPT→Voyager→SWE-bench→Gas Town→AAMS. Wirtschaftlich: asymmetrisch positiv (Zero Cost, -90% Token-Wiederholung, -96% Onboarding-Zeit). Wahrheit: LLMs können nicht autonom langfristig planen, aber mit Scaffolding bei jeder Session wissen wo sie stehen. Open Source: Pflicht, nicht Option. Issue #27. |
+| 083 | 2026-03-27 | ANALYSE | `WORKING/WORKPAPER/2026-03-27-long-horizon-reasoning-analyse.md` | Cross-Model-Validierung: Kimi, ChatGPT, Grok, Claude bestätigen unabhängig: LHR = Infrastruktur-Problem, nicht Modell-Problem. Konvergente Selbstdiagnose. 4 Gaps für v1.1: G1 LTM-Query-Protokoll, G2 Auto-Kompression, G3 CI-Enforcement, G4 Intent-Awareness. |
+| 084 | 2026-03-27 | WHITEPAPER | `WORKING/WHITEPAPER/WP-004-long-horizon-reasoning.md` | WP-004 erstellt. LHR-Analyse aus Workpaper zu stabilem Whitepaper promoviert. 11 Sektionen, Cross-Model-Validierung, 5 identifizierte Gaps, Referenzen. |
+| 085 | 2026-03-27 | SPEC | `reference/SPEC.md` | LHR-Positionierungsabsatz nach Philosophy: "AAMS is the lowest solvable layer in the LHR stack." Verweis auf WP-004. |
+| 086 | 2026-03-27 | SESSION | `WORKING/WORKPAPER/closed/2026-03-27-long-horizon-reasoning-analyse.md` | Session CLOSED. WP-004 erstellt, SPEC.md aktualisiert, Cross-Model-Validierung dokumentiert. Offene Items: G1-G4 als Issues, v1.1-Roadmap. |
+| 087 | 2026-03-27 | GITHUB | Issues #28-#31 (vorbereitet) | 4 Issue-Bodies für v1.1-Gaps erstellt: #28 Standardisiertes LTM-Query-Protokoll (query_ltm), #29 Automatische Workpaper-Kompression, #30 CI-Enforcement-Hooks, #31 Intent-Awareness im Diary. Alle referenzieren WP-004 + Issue #27. |
 
 ---
 

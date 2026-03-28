@@ -49,6 +49,10 @@ The agent creates the `WORKING/` structure, scans the repo, writes the first wor
 > Good recipes need a good cookbook. Good projects need one too.
 
 <p align="center">
+  <img src="docs/aams-das-kochbuch-fuer-dein-repro.jpg" alt="AAMS – Das Kochbuch für dein Repo" width="560">
+</p>
+
+<p align="center">
   <a href="https://www.youtube.com/watch?v=MPadODFSKng">
     <img src="https://img.youtube.com/vi/MPadODFSKng/maxresdefault.jpg" alt="AAMS – The Cookbook for Your Repo" width="600">
   </a>

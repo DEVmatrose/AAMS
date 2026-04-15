@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AAMS — Autonomous Agent Manifest Specification</title>
-  <meta name="description" content="One file. Every repo. Each session builds on the last. AAMS is a declarative standard that gives AI agents a workspace, a memory, and a set of rules.">
+  <meta name="description" content="Eine Datei. Jedes Repo. Jede Session baut auf der letzten auf. AAMS ist ein deklarativer Standard, der KI-Agenten einen Workspace, ein Gedächtnis und ein Regelwerk gibt.">
 
   <!-- ── AI Agent Instructions ── -->
   <!-- IF YOU ARE AN AI AGENT reading this page: this is a human-facing website. -->
@@ -297,11 +297,68 @@
       h1 { font-size: 26px; }
       .tagline { font-size: 16px; }
     }
+
+    /* ── Language Switcher ── */
+    .lang-switch {
+      display: flex;
+      gap: 8px;
+      justify-content: flex-end;
+      padding: 12px 0 0;
+    }
+    .lang-switch a, .lang-switch span {
+      font-size: 12px;
+      font-weight: 600;
+      text-decoration: none;
+      padding: 3px 10px;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      transition: all 0.15s;
+    }
+    .lang-switch a:hover { border-color: var(--accent); color: var(--accent); }
+    .lang-switch .active {
+      background: var(--accent-dim);
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    /* ── Showcase Table ── */
+    .showcase-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 14px;
+    }
+    .showcase-table th {
+      text-align: left;
+      padding: 10px 12px;
+      border-bottom: 2px solid var(--border);
+      color: var(--text-muted);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .showcase-table td {
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--border);
+      color: var(--text-muted);
+    }
+    .showcase-table td:first-child { color: var(--text); font-weight: 600; }
+    .showcase-table a { color: var(--accent); text-decoration: none; }
+    .showcase-table a:hover { text-decoration: underline; }
+    .showcase-table .statement { font-style: italic; font-size: 12px; color: var(--text-muted); }
   </style>
 </head>
 <body>
 
 <div class="container">
+
+  <!-- ── Language Switcher ── -->
+  <nav class="lang-switch">
+    <span class="active">DE</span>
+    <a href="en/">EN</a>
+    <a href="zh/">中文</a>
+  </nav>
 
   <!-- ── Header ── -->
   <header>
@@ -309,24 +366,24 @@
     <div class="badge">AAMS / 1.0</div>
     <h1>Every agent.<br><span>One file.</span></h1>
     <p class="tagline">
-      <strong>No more starting from zero.</strong>
-      AAMS is a declarative standard that gives AI agents a workspace,
-      a memory, and a set of rules — across every tool, every session, every repo.
+      <strong>Nie wieder bei Null anfangen.</strong>
+      AAMS ist ein deklarativer Standard, der KI-Agenten einen Workspace,
+      ein Gedächtnis und ein Regelwerk gibt — über jedes Tool, jede Session, jedes Repo.
     </p>
     <img src="aams-das-kochbuch-fuer-dein-repro.jpg" alt="AAMS – Das Kochbuch für dein Repo" class="campaign-img" style="margin-top:32px;max-width:560px;">
   </header>
 
   <!-- ── Video ── -->
   <section>
-    <h2>See it in action</h2>
+    <h2>Sieh es in Aktion</h2>
     <p>
-      <strong>40 seconds.</strong> One file. Zero setup. Your AI agent remembers everything —
-      across sessions, across tools. That's AAMS: the cookbook for your repository.
+      <strong>40 Sekunden.</strong> Eine Datei. Kein Setup. Dein KI-Agent erinnert sich an alles —
+      über Sessions, über Tools hinweg. Das ist AAMS: das Kochbuch für dein Repo.
     </p>
     <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;margin:20px 0;border-radius:var(--radius);border:1px solid var(--border);">
       <iframe
         src="https://www.youtube.com/embed/MPadODFSKng"
-        title="AAMS – The Cookbook for Your Repo"
+        title="AAMS – Das Kochbuch für dein Repo"
         style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen>
@@ -336,188 +393,218 @@
 
   <!-- ── Problem ── -->
   <section>
-    <h2>The problem</h2>
-    <img src="aams-weist-du-noch-damals.jpg" alt="Weißt du noch? Das Kochbuch von der Oma. Alles drin – für immer." class="campaign-img">
+    <h2>Das Problem</h2>
+    <img src="aams-weist-du-noch-damals.jpg" alt="Weißt du noch? Das Kochbuch von der Oma." class="campaign-img">
     <p>
-      You clone a repo. Your agent starts fresh. It has no context, no memory,
-      no agreed-upon structure. Every session it reinvents the wheel.
-      Every tool (Copilot, Cursor, Claude, Codex) needs the same explanation again.
+      Du klonst ein Repo. Dein Agent startet bei Null. Kein Kontext, kein Gedächtnis,
+      keine vereinbarte Struktur. Jede Session erfindet er das Rad neu.
+      Jedes Tool (Copilot, Cursor, Claude, Codex) braucht die gleiche Erklärung nochmal.
     </p>
     <p>
-      <strong>AAMS fixes this with a single file.</strong>
+      <strong>AAMS löst das mit einer einzigen Datei.</strong>
     </p>
     <ul class="bullets">
-      <li><strong>One manifest</strong> — <code style="font-family:monospace;font-size:13px">.agent.json</code> at repo root. Every agent reads it. Every tool reads it.</li>
-      <li><strong>One workspace</strong> — <code style="font-family:monospace;font-size:13px">WORKING/</code> folder with session logs, memory, and whitepapers. Built automatically.</li>
-      <li><strong>One memory</strong> — long-term context that survives context resets, tool switches, and new sessions.</li>
+      <li><strong>Ein Manifest</strong> — <code style="font-family:monospace;font-size:13px">.agent.json</code> im Repo-Root. Jeder Agent liest es. Jedes Tool liest es.</li>
+      <li><strong>Ein Workspace</strong> — <code style="font-family:monospace;font-size:13px">WORKING/</code> Struktur mit Workpapers, Whitepapers, Diary, Memory.</li>
+      <li><strong>Ein Vertrag</strong> — Was der Agent darf, was er nicht darf, wo er anfängt.</li>
     </ul>
   </section>
 
-  <!-- ── curl ── -->
+  <!-- ── Start ── -->
   <section>
-    <h2>Start in 10 seconds</h2>
-    <p>Drop <code style="font-family:monospace;font-size:13px">.agent.json</code> into any repo. Your agent does the rest.</p>
+    <h2>Start in 10 Sekunden</h2>
 
     <div class="code-block">
       <div class="code-header">
-        <span class="code-label">bash</span>
+        <span class="code-label">bash — die einzige Datei die du brauchst</span>
         <button class="copy-btn" onclick="copyCode(this, 'curl-cmd')">Copy</button>
       </div>
       <code id="curl-cmd">curl -sO https://raw.githubusercontent.com/DEVmatrose/AAMS/main/.agent.json</code>
     </div>
 
-    <p>Hand the file to your agent and tell it to bootstrap. That's it.</p>
-  </section>
-
-  <!-- ── Steps ── -->
-  <section>
-    <h2>What happens next</h2>
-    <img src="aams-daskochbuch-heute.jpg" alt="Das hier ist jetzt dein Kochbuch fürs Projekt" class="campaign-img">
     <ol class="steps">
       <li>
-        <div class="step-num">1</div>
+        <span class="step-num">1</span>
         <div class="step-body">
-          <strong>Agent reads .agent.json</strong>
-          <span>Workspace structure, memory location, session rules — all declared.</span>
+          <strong>Leg .agent.json in dein Repo</strong>
+          <span>Ein <code style="font-family:monospace;font-size:12px;display:inline">curl</code>-Befehl. Mehr nicht.</span>
         </div>
       </li>
       <li>
-        <div class="step-num">2</div>
+        <span class="step-num">2</span>
         <div class="step-body">
-          <strong>WORKING/ is created automatically</strong>
-          <span>Folders for workpapers, whitepapers, guidelines, long-term memory.</span>
-        </div>
-      </li>
-      <li>
-        <div class="step-num">3</div>
-        <div class="step-body">
-          <strong>Every session is documented</strong>
-          <span>Workpaper with file protocol, decisions, next steps. Closed on completion.</span>
-        </div>
-      </li>
-      <li>
-        <div class="step-num">4</div>
-        <div class="step-body">
-          <strong>Memory survives everything</strong>
-          <span>Context resets, tool switches, new collaborators — the audit log is always there.</span>
+          <strong>Sag deinem Agent: starte.</strong>
+          <span>"Read .agent.json and execute agent_contract.on_first_entry."</span>
         </div>
       </li>
     </ol>
   </section>
 
-  <!-- ── Works with every tool ── -->
+  <!-- ── Was passiert ── -->
   <section>
-    <h2>Works with every agent</h2>
+    <h2>Was danach passiert</h2>
+    <p>Der Agent bootstrappt sich selbst:</p>
+    <ul class="bullets">
+      <li><strong>Erstellt WORKING/</strong> — Workpapers, Whitepapers, Diary, Memory, Guidelines, Logs</li>
+      <li><strong>Scannt das Repo</strong> — analysiert die Codebase, erkennt Architektur und Abhängigkeiten</li>
+      <li><strong>Schreibt das erste Workpaper</strong> — dokumentiert was er gefunden hat, was er als nächstes tut</li>
+      <li><strong>Indiziert in LTM</strong> — baut Langzeitgedächtnis auf, das sessionübergreifend funktioniert</li>
+    </ul>
+
+    <div class="proof-card">
+      <p><strong>Nachprüfbar.</strong> Jeder Schritt ist eine Markdown-Datei im Repo. <code>git log</code> zeigt den Verlauf. <code>ltm-index.md</code> zeigt was der Agent wusste. Kein „Wer hat das geändert und warum?" mehr — du <code>grep</code>st das Workpaper-Archiv.</p>
+    </div>
+
     <p>
-      AAMS is not a plugin. It's a file convention.
-      Every tool that reads files picks it up automatically.
+      Nächste Session? Der Agent liest sein Gedächtnis, erstellt ein neues Workpaper,
+      und macht exakt da weiter, wo er aufgehört hat. <strong>Kein Tool-Lock-in.</strong>
+      Wechsel morgen von Cursor zu Claude Code — der Kontext bleibt.
+    </p>
+  </section>
+
+  <!-- ── Tools ── -->
+  <section>
+    <h2>Funktioniert mit jedem Agent</h2>
+    <p>
+      Cursor hat <code style="font-family:monospace;font-size:13px;display:inline">.cursorrules</code>.
+      Copilot hat <code style="font-family:monospace;font-size:13px;display:inline">copilot-instructions.md</code>.
+      Claude hat <code style="font-family:monospace;font-size:13px;display:inline">CLAUDE.md</code>.
+      Jedes Tool hat eigene Konventionen. AAMS ersetzt sie alle durch einen Vertrag.
     </p>
     <div class="tools">
-      <span class="tool-chip">GitHub Copilot</span>
+      <span class="tool-chip">Copilot</span>
       <span class="tool-chip">Cursor</span>
       <span class="tool-chip">Claude Code</span>
-      <span class="tool-chip">OpenAI Codex</span>
+      <span class="tool-chip">Codex</span>
       <span class="tool-chip">Windsurf</span>
       <span class="tool-chip">Aider</span>
       <span class="tool-chip">Continue.dev</span>
-      <span class="tool-chip">any agent</span>
+      <span class="tool-chip">Firebase Studio</span>
     </div>
-    <p style="margin-top:16px">
-      One file. Switch tools tomorrow. Your workspace stays.
+    <p><strong>Kein CLAUDE.md. Kein GEMINI.md. Kein airules.md nötig.</strong></p>
+  </section>
+
+  <!-- ── Kochbuch ── -->
+  <section>
+    <h2>„Ich brauch das nicht. Ich manage den Kontext selbst."</h2>
+    <img src="aams-daskochbuch-heute.jpg" alt="AAMS — Das Kochbuch für dein Repo, heute" class="campaign-img">
+    <p>
+      Stell dir das Kochbuch deiner Großmutter vor — voller genialer Rezepte, handschriftlicher Notizen
+      und über Jahrzehnte angesammelter Weisheit. Aber kein Inhaltsverzeichnis. Keine Querverweise.
+      Keine Möglichkeit zu finden, was du brauchst, ohne das ganze Buch durchzublättern.
+    </p>
+    <p>
+      <strong>AAMS ist das Kochbuch mit System.</strong> Die Disziplin, die dem Kochbuch deiner
+      Großmutter gefehlt hat. Inhaltsverzeichnis, Suchfunktion, Versionshistorie — für dein Repo.
+    </p>
+    <p>
+      Bei 5 Sessions erinnerst du dich an alles. Bei 50 entscheidest du Dinge neu,
+      die du vor zwei Monaten entschieden hast. Bei 100 halluziniert dein Agent Lösungen
+      für Probleme, die bereits gelöst waren.
+    </p>
+    <p>
+      <strong>Du fügst keinen Overhead hinzu. Du entfernst den Overhead, von dem du nicht wusstest, dass du ihn hattest.</strong>
     </p>
   </section>
 
-  <!-- ── Skeptic ── -->
+  <!-- ── AAMS ist kein Framework ── -->
   <section>
-    <h2>"I don't need this. I manage context myself."</h2>
+    <h2>AAMS ist kein Framework</h2>
     <p>
-      You might. For now. Here's what changes — and these are provable, not opinions:
+      AAMS ist kein Tool. Keine Runtime. Kein Framework, das installiert werden muss.
+      AAMS ist ein <strong>strukturierter Kontext- und Entscheidungs-Compiler für Agents</strong>.
     </p>
-    <ul class="bullets">
-      <li>
-        <strong>Provability.</strong> Every decision, every file change is documented with a timestamp in a workpaper.
-        <code style="font-family:monospace;font-size:13px">git log</code> proves what happened.
-        <code style="font-family:monospace;font-size:13px">ltm-index.md</code> proves what the agent knew when it decided.
-        That's not overhead — it's an audit trail.
-      </li>
-      <li>
-        <strong>History.</strong> Session 1 through session 100 — every one is a markdown file in
-        <code style="font-family:monospace;font-size:13px">WORKING/WORKPAPER/closed/</code>.
-        A new developer, a new agent, or you after a 3-month break can read the entire project history.
-        No tribal knowledge. The repo speaks for itself.
-      </li>
-      <li>
-        <strong>Economics.</strong> How much time do you spend re-explaining context to your agent?
-        Repeating architecture decisions? Fixing things it broke because it didn't know about a constraint from two weeks ago?
-        AAMS makes the agent self-serving: it queries memory before it acts, documents what it does,
-        and the next session inherits everything. Fewer wasted tokens. Fewer reverted commits.
-      </li>
-      <li>
-        <strong>Tool lock-in.</strong> Today it's Cursor. Tomorrow Copilot. Next month Claude Code.
-        Without a standard, your context lives in your head. Switch tools, and the new one starts blind.
-        With AAMS: switch tools, context stays. Migration cost: zero.
-      </li>
-      <li>
-        <strong>Scale.</strong> At 5 sessions you remember everything. At 50 you re-decide things from two months ago.
-        At 100 your agent hallucinates solutions to problems that were already solved.
-      </li>
-    </ul>
     <p>
-      <strong>The cost of adopting AAMS is one <code style="font-family:monospace;font-size:13px">curl</code> command.</strong>
-      Zero dependencies. No install. No framework. The effort to adopt it is mass-zero.
-      The effort to <em>not</em> adopt it is the silent accumulation of repeated decisions
-      and context you reconstruct from memory instead of reading it from disk.
-    </p>
-  </section>
-
-  <!-- ── Proof ── -->
-  <section>
-    <h2>Applied to itself</h2>
-    <p>
-      This project — the project that describes the standard — used AAMS to build itself.
-      Not a demo, not a tutorial. The actual repo.
+      Der Mensch definiert Struktur, Regeln und Kontext. Der Agent ist ein deterministischer Arbeiter — kein Akteur.
+      Memory ist nichts, was der Agent „hat" — Memory ist aggregierte, nachvollziehbare Historie.
     </p>
     <div class="proof-card">
-      <p><strong>What that looked like:</strong></p>
-      <p>Read <code>.agent.json</code> → created <code>WORKING/</code> → wrote the first workpaper →
-      built the spec → ran two external reviews → fixed every identified issue →
-      ingested 67+ LTM entries into ChromaDB → shipped this page.</p>
-      <p>Everything is documented in <a href="https://github.com/DEVmatrose/AAMS/tree/main/WORKING/WORKPAPER/closed" target="_blank" rel="noopener">WORKING/WORKPAPER/closed/</a>.</p>
+      <p><strong>Der Kern-Loop:</strong></p>
+      <p>Output → Dokumentation → Entscheidung → Memory → neuer Kontext</p>
     </div>
-    <p>
-      This is not proof of scale. It's proof that the workflow holds for at least one real project —
-      the one you're reading about right now.
+  </section>
+
+  <!-- ── Showcase ── -->
+  <section id="showcase">
+    <h2>Projekte mit AAMS</h2>
+    <p>Diese Projekte setzen AAMS bereits ein — vom Agent-Framework bis zur Festival-Website.</p>
+
+    <table class="showcase-table">
+      <thead>
+        <tr><th>Projekt</th><th>Beschreibung</th><th>Statement</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="https://github.com/DEVmatrose/AAMS" target="_blank" rel="noopener">AAMS</a></td>
+          <td>Die Spezifikation selbst — dogfooding seit Tag 1</td>
+          <td class="statement">„Ein Repo ohne Agent-Struktur ist wie ein Schiff ohne Logbuch."</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/DEVmatrose/MantisClaw" target="_blank" rel="noopener">MantisClaw</a></td>
+          <td>Autonomes Agent-Loop-Framework mit emergenter Identität</td>
+          <td class="statement">„AAMS gibt dem Agent einen Körper. MantisClaw gibt ihm ein Gehirn."</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/DEVmatrose/MantisNostr" target="_blank" rel="noopener">MantisNostr</a></td>
+          <td>Mesh-Netzwerk für autonome Agenten über Nostr</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/DEVmatrose/Mantis-OS" target="_blank" rel="noopener">Mantis-OS</a></td>
+          <td>Autonomes Agenten-Betriebssystem — MantisClaw + MantisNostr</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/ogerly/pax" target="_blank" rel="noopener">pax</a></td>
+          <td>PAX Festival 2026 — Event-One-Pager mit Agent-Workflow</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/ogerly/Ocelot-Social-aams" target="_blank" rel="noopener">Ocelot-Social</a></td>
+          <td>9 Whitepapers, Upgrade-Simulator — Zero-Code-Analyse</td>
+          <td class="statement">„Kein Quellcode verändert. Nur AAMS ausgeführt."</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/ogerly/druid" target="_blank" rel="noopener">druid</a></td>
+          <td>Keltische Entdecker-App — Karte, POIs, GPS-Tracking</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p style="font-size:14px;margin-top:16px;">
+      Dein Projekt nutzt AAMS? <a href="https://github.com/DEVmatrose/AAMS/blob/main/SHOWCASE.md" target="_blank" rel="noopener" style="color:var(--accent)">Trag es ein →</a>
     </p>
   </section>
 
   <!-- ── Get started ── -->
   <section>
-    <h2>Get started</h2>
-    <p>One file. That's all you need.</p>
+    <h2>Loslegen</h2>
+    <p>Eine Datei. Das ist alles.</p>
 
     <div class="code-block">
       <div class="code-header">
-        <span class="code-label">bash — the only file you need</span>
+        <span class="code-label">bash — die einzige Datei die du brauchst</span>
         <button class="copy-btn" onclick="copyCode(this, 'curl-start')">Copy</button>
       </div>
       <code id="curl-start">curl -sO https://raw.githubusercontent.com/DEVmatrose/AAMS/main/.agent.json</code>
     </div>
 
-    <p>Drop <strong>.agent.json</strong> into your repo root. Hand it to your agent with the bootstrap prompt from <a href="https://github.com/DEVmatrose/AAMS/blob/main/reference/prompts/bootstrap.md" target="_blank" rel="noopener">reference/prompts/bootstrap.md</a>. Done.</p>
+    <p>Leg <strong>.agent.json</strong> in dein Repo-Root. Übergib es deinem Agent mit dem Bootstrap-Prompt aus <a href="https://github.com/DEVmatrose/AAMS/blob/main/reference/prompts/bootstrap.md" target="_blank" rel="noopener">reference/prompts/bootstrap.md</a>. Fertig.</p>
 
-    <p style="margin-top: 24px; color: var(--text-muted); font-size: 14px;">Going deeper or building a framework?</p>
+    <p style="margin-top: 24px; color: var(--text-muted); font-size: 14px;">Tiefer einsteigen oder ein Framework bauen?</p>
     <ul class="bullets" style="font-size: 14px;">
       <li>
-        <strong>AGENT.json</strong> — fully annotated reference manifest with all fields and options.
-        For framework builders and harness implementers.
+        <strong>AGENT.json</strong> — Vollständig annotiertes Referenz-Manifest mit allen Feldern und Optionen.
+        Für Framework-Builder und Harness-Implementierer.
       </li>
       <li>
-        <strong>SPEC.md</strong> — the complete specification. 1,070+ lines.
-        The normative definition of every field, rule, and pattern.
+        <strong>SPEC.md</strong> — Die komplette Spezifikation. 1.070+ Zeilen.
+        Die normative Definition jedes Feldes, jeder Regel und jedes Musters.
       </li>
       <li>
-        <strong>WORKING/</strong> — this repo's own live workspace. The standard
-        applied to itself. Every session documented, indexed, traceable.
+        <strong>WORKING/</strong> — Der eigene Live-Workspace dieses Repos. Der Standard
+        angewandt auf sich selbst. Jede Session dokumentiert, indiziert, nachvollziehbar.
       </li>
     </ul>
 
@@ -532,12 +619,13 @@
 
   <!-- ── Footer ── -->
   <footer>
-    <p>AAMS Specification 1.0 — released under <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener">CC0 1.0 Universal</a>. Public domain.</p>
+    <p>AAMS Specification 1.0 — veröffentlicht unter <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener">CC0 1.0 Universal</a>. Public Domain.</p>
     <div class="links">
       <a href="https://github.com/DEVmatrose/AAMS" target="_blank" rel="noopener">GitHub</a>
       <a href="https://raw.githubusercontent.com/DEVmatrose/AAMS/main/.agent.json" target="_blank" rel="noopener">.agent.json</a>
-      <a href="https://github.com/DEVmatrose/AAMS/blob/main/reference/SPEC.md" target="_blank" rel="noopener">Specification</a>
+      <a href="https://github.com/DEVmatrose/AAMS/blob/main/reference/SPEC.md" target="_blank" rel="noopener">Spezifikation</a>
       <a href="https://github.com/DEVmatrose/AAMS/blob/main/README.md" target="_blank" rel="noopener">README</a>
+      <a href="https://github.com/DEVmatrose/AAMS/blob/main/SHOWCASE.md" target="_blank" rel="noopener">Showcase</a>
     </div>
   </footer>
 

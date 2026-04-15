@@ -850,22 +850,6 @@
       transform: translateY(0);
     }
 
-    /* ── Language Switcher ── */
-    .nav-lang {
-      font-family: var(--mono);
-      font-size: 11px;
-      font-weight: 600;
-      color: var(--muted) !important;
-      background: transparent;
-      border: 1px solid var(--border2);
-      border-radius: 4px;
-      padding: 3px 8px;
-      transition: all 0.2s !important;
-    }
-    .nav-lang:hover { border-color: var(--amber) !important; color: var(--amber) !important; }
-    .nav-lang.active-lang { border-color: var(--amber); color: var(--amber) !important; background: var(--amber-dim); }
-    .nav-sep { color: var(--muted); opacity: 0.3; font-size: 13px; }
-
     /* ── Responsive ── */
     @media (max-width: 700px) {
       nav { padding: 0 20px; }
@@ -890,10 +874,6 @@
     <a href="#showcase">Showcase</a>
     <a href="#field-report">Bericht erstatten</a>
     <a href="https://github.com/DEVmatrose/AAMS" target="_blank" class="nav-cta">→ GitHub</a>
-    <span class="nav-sep">|</span>
-    <span class="nav-lang active-lang">DE</span>
-    <a href="en/" class="nav-lang">EN</a>
-    <a href="zh/" class="nav-lang">中</a>
   </div>
 </nav>
 
@@ -1168,11 +1148,6 @@
         <div class="sc-desc">PAX Festival 2026 — Event-One-Pager, entwickelt mit AAMS-Agent-Workflow.</div>
         <div class="sc-link">github.com/ogerly/pax →</div>
       </a>
-      <a href="https://github.com/ogerly/druid" target="_blank" class="showcase-card fade-in">
-        <div class="sc-name">druid</div>
-        <div class="sc-desc">Keltische Entdecker-App mit Karte, POIs und GPS-Tracking — AAMS als Entwicklungs-Workflow.</div>
-        <div class="sc-link">github.com/ogerly/druid →</div>
-      </a>
     </div>
 
     <a href="https://github.com/DEVmatrose/AAMS/blob/main/SHOWCASE.md" target="_blank" class="btn-ghost fade-in">
@@ -1286,7 +1261,7 @@
     <a href="https://github.com/DEVmatrose/AAMS/blob/main/SHOWCASE.md" target="_blank">Showcase</a>
     <a href="https://github.com/DEVmatrose/AAMS/issues/new?labels=field-report&title=%5BFeld-Bericht%5D" target="_blank">Bericht erstatten</a>
   </div>
-  <div class="footer-copy">CC0 1.0 Universal · Every Agent. One File.</div>
+  <div class="footer-copy">MIT License · Every Agent. One File.</div>
 </footer>
 
 <script>

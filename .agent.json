@@ -111,6 +111,21 @@
       }
     },
 
+    "skills": {
+      "_doc": "Describes the relationship between global skill pools and project-local skill adaptations. Skills are crystallized community knowledge — agents may use them as starting points.",
+      "global_pool": {
+        "_doc": "A global pool of skills (e.g. skills.sh) is the source of truth. Not to be modified — only referenced.",
+        "reference": "https://skills.sh"
+      },
+      "local_adaptation": {
+        "_doc": "When a skill is adapted for a project, it carries its origin as a header comment (# source: origin/skill-name) and may be tailored 100% to the project context.",
+        "storage": ".github/skills/ or WORKING/TOOLS/"
+      },
+      "relationship": {
+        "_doc": "Global → Lokal: Quelle → Feinschliff. Exploration → direkter Griff."
+      }
+    },
+
     "gitignore_patterns": {
       "_note": "WORKING/MEMORY/ is intentionally NOT ignored — ltm-index.md is the shared collaboration artifact. Only binary/runtime artifacts are excluded.",
       "_gitkeep_note": "Use glob+negation patterns (WORKING/LOGS/*) instead of folder patterns (WORKING/LOGS/) to keep .gitkeep files trackable. See issue #10.",

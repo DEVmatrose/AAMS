@@ -329,6 +329,41 @@
       "additionalProperties": false
     },
 
+    "skills": {
+      "type": "object",
+      "description": "Optional skills guidance. Skills are crystallized community knowledge. All fields optional.",
+      "properties": {
+        "global_pool": {
+          "type": "object",
+          "properties": {
+            "_doc":        { "type": "string" },
+            "reference":   { "type": "string" }
+          },
+          "patternProperties": { "^_": true },
+          "additionalProperties": false
+        },
+        "local_adaptation": {
+          "type": "object",
+          "properties": {
+            "_doc":        { "type": "string" },
+            "storage":     { "type": "string" }
+          },
+          "patternProperties": { "^_": true },
+          "additionalProperties": false
+        },
+        "relationship": {
+          "type": "object",
+          "properties": {
+            "_doc":        { "type": "string" }
+          },
+          "patternProperties": { "^_": true },
+          "additionalProperties": false
+        }
+      },
+      "patternProperties": { "^_": true },
+      "additionalProperties": false
+    },
+
     "bootstrap_rules": {
       "type": "object",
       "description": "LTM configuration and bootstrap behaviour for the minimal .agent.json manifest. All fields optional.",

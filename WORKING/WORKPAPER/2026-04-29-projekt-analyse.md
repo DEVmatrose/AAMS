@@ -34,12 +34,10 @@ Absoluter Check des AAMS-Projekts: alle offenen GitHub-Issues, Status aller Work
 | CREATED | `reference/CONTRACT.md` | ✅ Stub mit Redirect |
 | CREATED | `MIGRATION.md` | ✅ v1.x → v2.0 Migration Guide |
 | CLOSED | `2026-04-29-file-safety.md` | ✅ → closed/ (#50 konzipiert + implementiert) |
-| CREATED | `.aams-version` | ✅ JSON state file für upgrade detection |
-| CLOSED | `2026-04-29-file-safety.md` | ✅ → closed/ (#50 konzipiert + implementiert) |
-| CREATED | `.aams-version` | ✅ JSON state file für upgrade detection |
-| CLOSED | `2026-04-29-file-safety.md` | ✅ → closed/ (#50 konzipiert + implementiert) |
+| CLOSED | `2026-04-29-skill-konzept.md` | ✅ → closed/ (#51 konzipiert + implementiert) |
 | CREATED | `.aams-version` | ✅ JSON state file für upgrade detection |
 | COMMIT | `93322b7` | ✅ feat: AAMS/2.0 — Spec→Contract reorientation + Phase 1+2 RFCT (60 files changed) |
+| COMMIT | `6f97fd9` | ✅ feat: AAMS/2.0 — File Safety (#50) + .aams-version + Git-Tag v2.0.0 (file_safety + skills) |
 
 ---
 
@@ -275,9 +273,9 @@ Letzte Schließung: 2026-04-14 (`public-presence-relaunch.md`) — 15 Tage her.
 | **Whitepaper-Konsistenz** | 8/10 | WP-001 INDEX vs. Inhalt gelöst. Alle Whitepapers konsistent "Agent Manifest". Manifest-Prinzip (D9) verankert. |
 | **Upgrade-Transparenz** | 5/10 | CHANGELOG + on_update existiert, `.aams-version` + Tags fehlen |
 | **Tool-Integrität** | 8/10 | validate_tools.py + wiki_lint.py aktiv, Pre-Flight Check in AGENTS.md |
-| **RFC-Progress** | 8/10 | Phase 1+2 RFCT abgeschlossen. Alle Whitepapers, READMEs, INDEX, Outreach, READ-AGENT.md "Specification" → "Agent Manifest". Manifest-Prinzip (D9) verankert. `.aams-version` + Git-Tags ausstehend. |
+| **RFC-Progress** | 9/10 | Phase 1+4 RFCT abgeschlossen. Alle Whitepapers, READMEs, INDEX, Outreach, READ-AGENT.md "Specification" → "Agent Manifest". Manifest-Prinzip (D9) verankert. `file_safety` + `skills` implementiert. `.aams-version` + Git-Tag `v2.0.0` erstellt. Issue #45 manuell schließen nötig. |
 | **LTM-Health** | 7/10 | 108 Einträge, Vektorspeicher aktiv, aber Alert > 90 |
-| **Gesamt** | **8/10** | ✅ Phase 1+2 RFCT abgeschlossen. Spec→Contract überall konsistent (Whitepapers, READMEs, INDEX, Outreach). Manifest-Prinzip verankert. `.aams-version` + Git-Tags ausstehend. |
+| **Gesamt** | **9/10** | ✅ Phase 1+4 RFCT abgeschlossen. Spec→Contract überall konsistent (Whitepapers, READMEs, INDEX, Outreach, READ-AGENT.md). Manifest-Prinzip (D9) verankert. `file_safety` + `skills` implementiert. `.aams-version` + Git-Tag `v2.0.0` erstellt. Issue #45 manuell schließen nötig. |
 
 ---
 
@@ -404,6 +402,24 @@ Letzte Schließung: 2026-04-14 (`public-presence-relaunch.md`) — 15 Tage her.
 - `CONTRACT.md`: Erwähnung von `file_safety`
 - Workpaper → closed/
 
+### Phase 4 RFCT — Skills (#51)
+
+- `skills` konzipiert (Issue #51)
+- Manifest-Prinzip (D9): beschreibend, nicht preskriptiv
+- `skills` in `.agent.json` eingefügt
+- `skills` in `reference/AGENT.json` als Beispiel
+- `skills` in `reference/AGENT_SCHEMA.json` als optional field
+- `CONTRACT.md`: Erwähnung von `skills`
+- Workpaper → closed/
+
+- `file_safety` konzipiert (Issue #50 mantis-cms Feld-Report)
+- Manifest-Prinzip (D9): beschreibend, nicht preskriptiv
+- `file_safety` in `.agent.json` eingefügt
+- `file_safety` in `reference/AGENT.json` als Beispiel
+- `file_safety` in `reference/AGENT_SCHEMA.json` als optional field
+- `CONTRACT.md`: Erwähnung von `file_safety`
+- Workpaper → closed/
+
 ### Additional Changes
 
 - `topic_registry` maschinenlesbar in `.agent.json` (Issue #41-Empf.3)
@@ -434,12 +450,13 @@ Letzte Schließung: 2026-04-14 (`public-presence-relaunch.md`) — 15 Tage her.
 **Nächste Session sollte:**
 1. ✅ Phase 1 RFCT abgeschlossen (`.agent.json`, AGENT_SCHEMA.json, AGENT.json, CHANGELOG.md, READ-AGENT.md, INDEX.md, MIGRATION.md, CONTRACT.md, Stub SPEC.md, AGENTS.md, copilot-instructions.md, STRAT + RFCT → closed/)
 2. ✅ Phase 2 RFCT abgeschlossen (WP-001, WP-002, WP-003, WP-004 + INDEX.md + README.md + README.en.md + README.zh.md + reference/README-DE.md + docs/outreach + READ-AGENT.md — "Agent Manifest" überall)
-3. ✅ `.aams-version` angelegt + Git-Tag `v2.0.0` (Commits `93322b7` + `943928b`)
-4. Issue #45 schließen (Duplikat) — ⚠️ GitHub-API-Token invalid, manuell nötig
-5. #50 File Safety konzipieren
-6. #51 Skill-Konzept konzipieren
+3. ✅ Phase 3 RFCT abgeschlossen (`file_safety` konzipiert + implementiert (#50))
+4. ✅ Phase 4 RFCT abgeschlossen (`skills` konzipiert + implementiert (#51))
+5. ✅ `.aams-version` angelegt + Git-Tag `v2.0.0` (Commits `93322b7` + `943928b` + `6f97fd9`)
+6. Issue #45 schließen (Duplikat) — ⚠️ GitHub-API-Token invalid, manuell nötig
+7. Issue #26 Security Signals konzipieren (Backlog)
 
-**Blocker:** Keine — Spec→Contract Refactor Phase 1+2 abgeschlossen. WP-001 INDEX vs. Inhalt Widerspruch gelöst. Alle Whitepapers + READMEs konsistent "Agent Manifest". Manifest-Prinzip (D9) verankert. `.aams-version` + Git-Tag `v2.0.0` erstellt.
+**Blocker:** Keine — Spec→Contract Refactor Phase 1+4 abgeschlossen. WP-001 INDEX vs. Inhalt Widerspruch gelöst. Alle Whitepapers + READMEs konsistent "Agent Manifest". Manifest-Prinzip (D9) verankert. `file_safety` + `skills` implementiert. `.aams-version` + Git-Tag `v2.0.0` erstellt.
 
 **Phase 2 RFCT Deliverables:**
 1. ✅ WP-001: "Specification" → "Agent Manifest" (Header, Pending Decision, Current Status, governance, agent_contract)

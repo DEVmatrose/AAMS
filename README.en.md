@@ -66,6 +66,14 @@ Now imagine that cookbook had a table of contents, a search function, and a vers
 
 ---
 
+## Live Demo
+
+<p align="center">
+  <img src="docs/presenter-image.png" alt="AAMS Presenter Demo" width="800">
+</p>
+
+---
+
 ### Chat Agent Users: Start Here
 
 > **Chat agents (Copilot Chat, ChatGPT, Cursor Chat) don't self-bootstrap.** You need to paste a prompt.

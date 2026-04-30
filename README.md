@@ -70,6 +70,14 @@ Jetzt stell dir vor, dieses Kochbuch hätte ein Inhaltsverzeichnis, eine Suchfun
 
 ---
 
+## Live Demo
+
+<p align="center">
+  <img src="docs/presenter-image.png" alt="AAMS Presenter Demo" width="800">
+</p>
+
+---
+
 ### Chat-Agent-Nutzer: Hier starten
 
 > **Chat-Agents (Copilot Chat, ChatGPT, Cursor Chat) bootstrappen nicht selbst.** Du musst einen Prompt einfügen.

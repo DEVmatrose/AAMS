@@ -61,7 +61,7 @@ Absoluter Check des AAMS-Projekts: alle offenen GitHub-Issues, Status aller Work
 | #41 | 2026-04-09 | Feldbericht: MantisClaw Upgrade | Hoch | ✅ 4/5 Empfehlungen | 🟡 Teilweise |
 | #26 | 2026-03-26 | Security Signals in AGENT.json | Mittel | ❌ Kein Workpaper | 🔴 Backlog |
 
-**Hinweis:** GitHub-API-Token in `.env` ist ungültig (`REDACTED` → 401 Bad Credentials). Issues via unauthenticated API abgefragt.
+**Hinweis:** GitHub-API-Token in `.env` ist ungültig (→ 401 Bad Credentials). Issues via unauthenticated API abgefragt.
 
 ---
 

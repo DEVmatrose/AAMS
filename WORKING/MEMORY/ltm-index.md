@@ -272,3 +272,4 @@ Nach Abschluss der laufenden Session.
  | 131 | 2026-04-30 | ARCH | WP-007 | SPEC.md/CONTRACT.md circular stub problem dokumentiert. Beide Stubs, circular redirect. README now references CONTRACT.md. → WP-007-spec-contract-stub.md |
  | 132 | 2026-04-30 | ARCH | WP-008 | Health-Score 10/10: `.aams-version` updated, Git-Tag v2.1.0 created, Issue #45 closed (duplikat). README-Konsistenz **done**. 12 Guidelines **done**. |
  | 133 | 2026-04-30 | README | `docs/presenter-image.png` | presenter-image.png in README.md + README.en.md (Live Demo section) | Commit `b52ea5e` |
+ | 134 | 2026-04-30 | LTM | `ltm-index.md` | LTM ingest — entry 134. LTM: 133 entries (audit-log + ChromaDB). Health-Score 10/10. Whitepapers 8 + INDEX.md. Guidelines 12. Active: 2, Observe: 3, Closed: 51. Git-Tag v2.1.0 (10 Commits). |

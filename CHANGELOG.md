@@ -21,6 +21,7 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 - `topic_registry` maschinenlesbar in `.agent.json`
 - `.aams-version` state file (updated)
 - **12 Guidelines** in `WORKING/GUIDELINES/` (Documentation Model, Naming Schema, Workpaper Lifecycle, Decision-Promotion, File Protocol, LTM Rules, Topic Registry, Wiki Lint, AAMS Doctor, Git Safety, README Consistency, Diary Format)
+- `docs/presenter-image.png` — Live Demo in README.md + README.en.md
 
 ### Changed
 - Workpaper Lifecycle: active → observe → closed (drei Zustände)

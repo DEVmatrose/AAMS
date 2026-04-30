@@ -17,6 +17,7 @@
 | WP-006 | [WP-006-readme-consistency.md](./WP-006-readme-consistency.md) | README-Konsistenz — DE/EN/ZH Reality Check + Fixes | 2026-04-30 | Aktiv |
 | WP-007 | [WP-007-spec-contract-stub.md](./WP-007-spec-contract-stub.md) | SPEC.md/CONTRACT.md circular stub problem | 2026-04-30 | Aktiv |
 | WP-008 | [WP-008-health-score-10.md](./WP-008-health-score-10.md) | Health-Score 10/10 — `.aams-version` + Git-Tags + Issue #45 | 2026-04-30 | Aktiv |
+| WP-007 | [WP-007-spec-contract-stub.md](./WP-007-spec-contract-stub.md) | SPEC.md/CONTRACT.md circular stub problem | 2026-04-30 | Aktiv |
 
 ---
 
@@ -42,4 +43,4 @@ WP-002 ←→ WP-003: Related Work → Field Discourse (externe vs. interne Bewe
 
 ---
 
-> Letztes Update: 2026-04-30 — WP-005 + WP-006 + WP-007 + WP-008 added. README-Konsistenz **done**. 12 Guidelines created. Health-Score **10/10**. Manifest-Prinzip (D9): AAMS describes, es schreibt kein Verhalten vor.
+> Letztes Update: 2026-04-30 — WP-005 + WP-006 + WP-007 + WP-008 added. README-Konsistenz **done**. 12 Guidelines **done**. presenter-image.png in README.md + README.en.md. Health-Score **10/10**. Manifest-Prinzip (D9): AAMS describes, es schreibt kein Verhalten vor.

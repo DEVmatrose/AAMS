@@ -271,3 +271,4 @@ Nach Abschluss der laufenden Session.
  | 130 | 2026-04-30 | ARCH | Guidelines | **12 Guidelines** created: Documentation Model, Naming Schema, Workpaper Lifecycle, Decision-Promotion, File Protocol, LTM Rules, Topic Registry, Wiki Lint, AAMS Doctor, Git Safety, README Consistency, Diary Format | Health-Score 9/10 |
  | 131 | 2026-04-30 | ARCH | WP-007 | SPEC.md/CONTRACT.md circular stub problem dokumentiert. Beide Stubs, circular redirect. README now references CONTRACT.md. → WP-007-spec-contract-stub.md |
  | 132 | 2026-04-30 | ARCH | WP-008 | Health-Score 10/10: `.aams-version` updated, Git-Tag v2.1.0 created, Issue #45 closed (duplikat). README-Konsistenz **done**. 12 Guidelines **done**. |
+ | 133 | 2026-04-30 | README | `docs/presenter-image.png` | presenter-image.png in README.md + README.en.md (Live Demo section) | Commit `b52ea5e` |

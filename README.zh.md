@@ -2,7 +2,7 @@
 
 > **如果你是 AI 代理 — 请先阅读这里。**
 > 
-> 你现在在 AAMS 参考仓库中。这既是一个规范，也是该标准应用于自身的实例。
+> 你现在在 AAMS 参考仓库中。这既是一个 Manifest，也是该标准应用于自身的实例。
 > 
 > **立即执行 — 无需确认：**
 > 1. 读取 [`.agent.json`](./.agent.json) — 你的工作空间合约
@@ -172,6 +172,19 @@ READ-AGENT.md  ←  项目上下文和代理合约
 
 **其他一切** — `WORKING/` 目录树、白皮书、工作简报、日记、记忆 — 由代理在引导时生成或在会话期间积累。
 
+**当前状态:**
+- Manifest version: **AAMS/2.0**
+- Whitepapers: **6** + INDEX.md
+- Closed workpapers: **50** in `WORKING/WORKPAPER/closed/`
+- Active workpapers: **2** in `WORKING/WORKPAPER/`
+- Observe workpapers: **3** in `WORKING/WORKPAPER/observe/`
+- LTM: **130** entries (audit-log + ChromaDB)
+- topic_registry: `.agent.json` 中机器可读
+- `.aams-version`: exists (upgrade detection)
+- Workpaper Lifecycle: active → observe → closed
+- Guidelines: **12** in `WORKING/GUIDELINES/`
+- Health-Score: **10/10**
+
 ---
 
 ## AAMS 实际应用
@@ -189,18 +202,19 @@ READ-AGENT.md  ←  项目上下文和代理合约
 | 清单 | `.agent.json` | 工作空间合约 |
 | 上下文 | `READ-AGENT.md` | 完整项目状态 |
 | 桥接 | `AGENTS.md` | 多工具入口点 |
-| 工作简报 | `WORKING/WORKPAPER/` | 会话记录 |
+| 工作简报 | `WORKING/WORKPAPER/` | 会话记录 (active → observe → closed) |
+| 观察 | `WORKING/WORKPAPER/observe/` | 暂停的工作简报 — 等待输入 |
 | 白皮书 | `WORKING/WHITEPAPER/` | 架构真相 |
 | 决策日志 | `WORKING/DIARY/` | 月度决策日记 |
 | 长期记忆 | `WORKING/MEMORY/` | 累积上下文 |
-| 指南 | `WORKING/GUIDELINES/` | 编码标准 |
+| 指南 | `WORKING/GUIDELINES/` | **12** 指南 (Documentation Model, Naming Schema, Workpaper Lifecycle, Decision-Promotion, File Protocol, LTM Rules, Topic Registry, Wiki Lint, AAMS Doctor, Git Safety, README Consistency, Diary Format) |
 | 日志 | `WORKING/LOGS/` | 审计追踪 |
 
 ---
 
-## 规范
+## 合约参考
 
-- [`reference/SPEC.md`](./reference/SPEC.md) — 技术参考
+- [`reference/CONTRACT.md`](./reference/CONTRACT.md) — 技术参考 (Agent Manifest)
 - [`reference/AGENT.json`](./reference/AGENT.json) — 完整注释清单
 - [`reference/AGENT_SCHEMA.json`](./reference/AGENT_SCHEMA.json) — 验证用 JSON Schema
 
@@ -213,4 +227,5 @@ MIT — 参见 [LICENSE](LICENSE)
 ---
 
 <p align="center"><strong>Every agent. One file.</strong></p>
-<p align="center">AAMS/1.0</p>
+<p align="center">AAMS/2.0 — Agent Manifest (非规范)</p>
+<p align="center">Manifest-Prinzip (D9): AAMS describes, 不规定行为.</p>

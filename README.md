@@ -221,6 +221,19 @@ Lange tool-spezifische Dateien (z.B. `CLAUDE.md` >150 Zeilen) verschlechtern nac
 
 **Alles andere** — der `WORKING/`-Baum, Whitepapers, Workpapers, Diary, Memory — wird vom Agent beim Bootstrap generiert oder während Sessions aufgebaut.
 
+**Current Status:**
+- Manifest version: **AAMS/2.0**
+- Whitepapers: **6** + INDEX.md
+- Closed workpapers: **50** in `WORKING/WORKPAPER/closed/`
+- Active workpapers: **2** in `WORKING/WORKPAPER/`
+- Observe workpapers: **3** in `WORKING/WORKPAPER/observe/`
+- LTM: **130** entries (audit-log + ChromaDB)
+- topic_registry: maschinenlesbar in `.agent.json`
+- `.aams-version`: exists (upgrade detection)
+- Workpaper Lifecycle: active → observe → closed
+- Guidelines: **12** in `WORKING/GUIDELINES/`
+- Health-Score: **10/10**
+
 ---
 
 ## AAMS in freier Wildbahn
@@ -238,18 +251,19 @@ Du willst dein Projekt hinzufügen? Öffne einen PR — wir freuen uns zu sehen,
 | Manifest | `.agent.json` | Workspace-Vertrag |
 | Kontext | `READ-AGENT.md` | Vollständiger Projektzustand |
 | Bridge | `AGENTS.md` | Multi-Tool-Einstiegspunkt |
-| Workpapers | `WORKING/WORKPAPER/` | Session-Protokolle |
+| Workpapers | `WORKING/WORKPAPER/` | Session-Protokolle (active → observe → closed) |
+| Observe | `WORKING/WORKPAPER/observe/` | Pausierte Workpapers — warten auf Input |
 | Whitepapers | `WORKING/WHITEPAPER/` | Architektur-Wahrheit |
 | Entscheidungslog | `WORKING/DIARY/` | Monatliches Entscheidungsjournal |
 | Langzeitgedächtnis | `WORKING/MEMORY/` | Akkumulierter Kontext |
-| Richtlinien | `WORKING/GUIDELINES/` | Coding-Standards |
+| Richtlinien | `WORKING/GUIDELINES/` | **12** Guidelines (Documentation Model, Naming Schema, Workpaper Lifecycle, Decision-Promotion, File Protocol, LTM Rules, Topic Registry, Wiki Lint, AAMS Doctor, Git Safety, README Consistency, Diary Format) |
 | Logs | `WORKING/LOGS/` | Audit-Trail |
 
 ---
 
-## Spezifikation
+## Contract Reference
 
-- [`reference/SPEC.md`](./reference/SPEC.md) — Technische Referenz
+- [`reference/CONTRACT.md`](./reference/CONTRACT.md) — Technische Referenz (Agent Manifest)
 - [`reference/AGENT.json`](./reference/AGENT.json) — Vollständig annotiertes Manifest
 - [`reference/AGENT_SCHEMA.json`](./reference/AGENT_SCHEMA.json) — JSON Schema zur Validierung
 
@@ -262,4 +276,5 @@ MIT — siehe [LICENSE](LICENSE)
 ---
 
 <p align="center"><strong>Every agent. One file.</strong></p>
-<p align="center">AAMS/1.0</p>
+<p align="center">AAMS/2.0 — Agent Manifest (nicht Specification)</p>
+<p align="center">Manifest-Prinzip (D9): AAMS describes, es schreibt kein Verhalten vor.</p>

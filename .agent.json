@@ -21,8 +21,9 @@
     "structure": {
       "_doc": "Workspace structure conventions. Folders may be created by agents or users following these paths. Never deletes. Never overwrites existing content.",
       "whitepapers": "./WORKING/WHITEPAPER",
-      "workpapers":  "./WORKING/WORKPAPER",
+      "workpapers":      "./WORKING/WORKPAPER",
       "workpapers_closed": "./WORKING/WORKPAPER/closed",
+      "workpapers_observe": "./WORKING/WORKPAPER/observe",
       "memory":      "./WORKING/MEMORY",
       "ltm_store":   "./WORKING/AGENT-MEMORY",
       "diary":       "./WORKING/DIARY",

@@ -243,6 +243,7 @@ Lange tool-spezifische Dateien (z.B. `CLAUDE.md` >150 Zeilen) verschlechtern nac
 - Workpaper Lifecycle: active → observe → closed
 - Guidelines: **12** in `WORKING/GUIDELINES/`
 - Health-Score: **10/10**
+- Naming Schema: Whitepapers → WH-*, Workpapers → WP-*
 
 ---
 

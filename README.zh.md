@@ -186,6 +186,7 @@ READ-AGENT.md  ←  项目上下文和代理合约
 - Workpaper Lifecycle: active → observe → closed
 - Guidelines: **12** in `WORKING/GUIDELINES/`
 - Health-Score: **10/10**
+- Naming Schema: Whitepapers → WH-*, Workpapers → WP-*
 
 ---
 

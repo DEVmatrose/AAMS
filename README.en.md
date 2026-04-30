@@ -194,6 +194,7 @@ One set of files. All tools. When the rules change, update one place — not fiv
 - Workpaper Lifecycle: active → observe → closed
 - Guidelines: **12** in `WORKING/GUIDELINES/`
 - Health-Score: **10/10**
+- Naming Schema: Whitepapers → WH-*, Workpapers → WP-*
 
 ---
 
